@@ -8,8 +8,9 @@
     height: 924px;
   }
   
-  app-main-page {
+  app-main-layout {
     flex-grow: 1;
+    background-color:#c3c4c53d;
   }
   
   @media (max-width: 768px) {

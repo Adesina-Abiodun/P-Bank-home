@@ -1,12 +1,18 @@
 <div class="sidebar">
     <ul class="list-items">
-      <li *ngFor="let item of sideBarMenu">
-        <div (click)="toggleSubMenu(item)" style="padding-left: 30px;">
-          <i [class]="item.icon"></i> {{ item.title }}
+      <li *ngFor="let item of sideBarMenu" class="firstLi">
+        <div [routerLink]="item.route" (click)="toggleSubMenu(item)" class="list1">
+          <ng-container *ngIf="item.showIcon">
+            <i [class]="item.icon"></i>
+          </ng-container>
+          <a >{{ item.title }}</a>
         </div>
-        <ul *ngIf="item.isOpen" class="submenu">
+        <ul *ngIf="item.isOpen && item.showSubMenu" class="submenu">
           <li *ngFor="let subItem of item.subMenu">
-            {{ subItem.title }}
+            <ng-container *ngIf="subItem.showIcon">
+              <i [class]="subItem.icon"></i>
+            </ng-container>
+            <a [routerLink]="subItem.route">{{ subItem.title }}</a>
           </li>
         </ul>
       </li>
