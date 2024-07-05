@@ -1,7 +1,7 @@
 <div class="sidebar">
-    <ul style="border: 1px solid red;">
+    <ul class="list-items">
       <li *ngFor="let item of sideBarMenu">
-        <div (click)="toggleSubMenu(item)">
+        <div (click)="toggleSubMenu(item)" style="padding-left: 30px;">
           <i [class]="item.icon"></i> {{ item.title }}
         </div>
         <ul *ngIf="item.isOpen" class="submenu">

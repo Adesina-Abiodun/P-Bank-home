@@ -17,6 +17,14 @@ export class GeneralService {
          {
           title: 'item 1',
           icon: ''
+         },
+         {
+          title: 'item 1',
+          icon: ''
+         },
+         {
+          title: 'item 1',
+          icon: ''
          }
         ] 
       },

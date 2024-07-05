@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SIDEBAR } from 'src/app/interface/general';
 import { GeneralService } from 'src/app/service/general.service';
 
 @Component({
@@ -16,7 +17,12 @@ export class SidebarComponent implements OnInit {
     console.log("menu:", this.sideBarMenu)
   }
   
-  toggleSubMenu(item: { isOpen: boolean; }) {
-    item.isOpen = !item.isOpen;
+  toggleSubMenu(selectedItem: SIDEBAR) {
+    this.sideBarMenu.forEach((item: SIDEBAR) => {
+      if (item !== selectedItem) {
+        item.isOpen = false;
+      }
+    });
+    selectedItem.isOpen = !selectedItem.isOpen;
   }
 }
