@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <ul style="border: 1px solid red;">
+      <li *ngFor="let item of sideBarMenu">
+        <div (click)="toggleSubMenu(item)">
+          <i [class]="item.icon"></i> {{ item.title }}
+        </div>
+        <ul *ngIf="item.isOpen" class="submenu">
+          <li *ngFor="let subItem of item.subMenu">
+            {{ subItem.title }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

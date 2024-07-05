@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  app-sidebar {
+    width: 271px;
+    height: 924px;
+  }
+  
+  app-main-page {
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      /* flex-direction: column; */
+    }
+  
+    app-sidebar {
+      /* width: 100%; */
+    }
+  }
+  
