@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { AuditTrailComponent } from './modules/audit-trail/audit-trail.component
 import { MyProfileComponent } from './modules/my-profile/my-profile.component';
 import { PortalSettingsComponent } from './modules/portal-settings/portal-settings.component';
 import { AdminReportsComponent } from './modules/admin-reports/admin-reports.component';
+import { TableUtilsComponent } from './utils/table-utils/table-utils.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { AdminReportsComponent } from './modules/admin-reports/admin-reports.com
     MyProfileComponent,
     PortalSettingsComponent,
     AdminReportsComponent,
+    TableUtilsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

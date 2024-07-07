@@ -10,35 +10,38 @@ export class GeneralService {
     return [
       {
         title: 'File Data Manager',
-        icon: 'fas fa-home',
+        icon: '../../../assets/icons/userSetUp.svg',
+        goldenIcon: "../../../assets/icons/userSetUp.svg",
         showIcon: true,
         isOpen: false,
-        showSubMenu: false,
-        route: 'file-data-manager', // Add route here
+        showSubMenu: true,
+        route: 'file-data-manager', 
         subMenu: [
-          { title: 'Item 1', icon: '', route: 'file-data-manager/item1' }, // Add route here
+          { title: 'Item 1', icon: '', route: 'file-data-manager/item1' }, 
           { title: 'Item 2', icon: '', route: 'file-data-manager/item2' },
           { title: 'Item 3', icon: '', route: 'file-data-manager/item3' }
         ]
       },
       {
         title: 'User Setup',
-        icon: 'fas fa-cog',
+        icon: '../../../assets/icons/userSetUp.svg',
+        goldenIcon: '../../../assets/icons/g1.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: false,
-        route: 'user-setup', // Add route here
+        showSubMenu: true,
+        route: 'user-setup',
         subMenu: [
           { title: 'Item 1', icon: '', route: 'user-setup/item1' }
         ]
       },
       {
         title: 'Audit Trail',
-        icon: 'fas fa-cog',
+        icon: '../../../assets/icons/newAudit.svg',
+        goldenIcon: '../../../assets/icons/audit-golden.svg',
         showIcon: true,
         isOpen: false,
         showSubMenu: true,
-        route: 'audit-trail', // Add route here
+        route: 'audit-trail', 
         subMenu: [
           { title: 'Activity Log', icon: '', route: 'audit-trail/activity-log' },
           { title: 'Change Log', icon: '', route: 'audit-trail/change-log' }
@@ -46,33 +49,36 @@ export class GeneralService {
       },
       {
         title: 'My Profile',
-        icon: 'fas fa-cog',
+        icon: '../../../assets/icons/myProfile.svg',
+        goldenIcon: '../../../assets/icons/golden-profile.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: false,
-        route: 'my-profile', // Add route here
+        showSubMenu: true,
+        route: 'my-profile', 
         subMenu: [
           { title: 'Item 1', icon: '', route: 'my-profile/item1' }
         ]
       },
       {
         title: 'Portal Settings',
-        icon: 'fas fa-cog',
+        icon: '../../../assets/icons/settings.svg',
+        goldenIcon: '../../../assets/icons/golden-setting.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: false,
-        route: 'portal-settings', // Add route here
+        showSubMenu: true,
+        route: 'portal-settings', 
         subMenu: [
           { title: 'Item 1', icon: '', route: 'portal-settings/item1' }
         ]
       },
       {
         title: 'Admin Reports',
-        icon: 'fas fa-cog',
+        icon: '../../../assets/icons/reports.svg',
+        goldenIcon: '../../../assets/icons/golden-report.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: false,
-        route: 'admin-reports', // Add route here
+        showSubMenu: true,
+        route: 'admin-reports',
         subMenu: [
           { title: 'Item 1', icon: '', route: 'admin-reports/item1' }
         ]

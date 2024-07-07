@@ -14,7 +14,6 @@ export class SidebarComponent implements OnInit {
   
   ngOnInit(): void {
     this.sideBarMenu = this.genSrv.sideBarMenu
-    console.log("menu:", this.sideBarMenu)
   }
   
   toggleSubMenu(selectedItem: SIDEBAR) {
