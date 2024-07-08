@@ -2,25 +2,24 @@ import { Injectable } from '@angular/core';
 import { SIDEBAR } from '../interface/general';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GeneralService {
-
   get sideBarMenu(): SIDEBAR[] {
     return [
       {
         title: 'File Data Manager',
         icon: '../../../assets/icons/userSetUp.svg',
-        goldenIcon: "../../../assets/icons/userSetUp.svg",
+        goldenIcon: '../../../assets/icons/userSetUp.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: true,
-        route: 'file-data-manager', 
+        showSubMenu: false,
+        route: 'file-data-manager',
         subMenu: [
-          { title: 'Item 1', icon: '', route: 'file-data-manager/item1' }, 
+          { title: 'Item 1', icon: '', route: 'file-data-manager/item1' },
           { title: 'Item 2', icon: '', route: 'file-data-manager/item2' },
-          { title: 'Item 3', icon: '', route: 'file-data-manager/item3' }
-        ]
+          { title: 'Item 3', icon: '', route: 'file-data-manager/item3' },
+        ],
       },
       {
         title: 'User Setup',
@@ -28,11 +27,9 @@ export class GeneralService {
         goldenIcon: '../../../assets/icons/g1.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: true,
+        showSubMenu: false,
         route: 'user-setup',
-        subMenu: [
-          { title: 'Item 1', icon: '', route: 'user-setup/item1' }
-        ]
+        subMenu: [{ title: 'Item 1', icon: '', route: 'user-setup/item1' }],
       },
       {
         title: 'Audit Trail',
@@ -41,11 +38,15 @@ export class GeneralService {
         showIcon: true,
         isOpen: false,
         showSubMenu: true,
-        route: 'audit-trail', 
+        route: 'audit-trail',
         subMenu: [
-          { title: 'Activity Log', icon: '', route: 'audit-trail/activity-log' },
-          { title: 'Change Log', icon: '', route: 'audit-trail/change-log' }
-        ]
+          {
+            title: 'Activity Log',
+            icon: '',
+            route: 'audit-trail/activity-log',
+          },
+          { title: 'Change Log', icon: '', route: 'audit-trail/change-log' },
+        ],
       },
       {
         title: 'My Profile',
@@ -53,11 +54,9 @@ export class GeneralService {
         goldenIcon: '../../../assets/icons/golden-profile.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: true,
-        route: 'my-profile', 
-        subMenu: [
-          { title: 'Item 1', icon: '', route: 'my-profile/item1' }
-        ]
+        showSubMenu: false,
+        route: 'my-profile',
+        subMenu: [{ title: 'Item 1', icon: '', route: 'my-profile/item1' }],
       },
       {
         title: 'Portal Settings',
@@ -65,11 +64,11 @@ export class GeneralService {
         goldenIcon: '../../../assets/icons/golden-setting.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: true,
-        route: 'portal-settings', 
+        showSubMenu: false,
+        route: 'portal-settings',
         subMenu: [
-          { title: 'Item 1', icon: '', route: 'portal-settings/item1' }
-        ]
+          { title: 'Item 1', icon: '', route: 'portal-settings/item1' },
+        ],
       },
       {
         title: 'Admin Reports',
@@ -77,13 +76,10 @@ export class GeneralService {
         goldenIcon: '../../../assets/icons/golden-report.svg',
         showIcon: true,
         isOpen: false,
-        showSubMenu: true,
+        showSubMenu: false,
         route: 'admin-reports',
-        subMenu: [
-          { title: 'Item 1', icon: '', route: 'admin-reports/item1' }
-        ]
-      }
+        subMenu: [{ title: 'Item 1', icon: '', route: 'admin-reports/item1' }],
+      },
     ];
   }
-  
 }
