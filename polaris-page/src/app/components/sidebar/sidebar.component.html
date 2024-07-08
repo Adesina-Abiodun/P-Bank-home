@@ -5,7 +5,7 @@
         [routerLink]="item.route"
         (click)="toggleSubMenu(item)"
         class="list1"
-        [class.active]="item.isOpen"
+        [class.active]="item.isOpen || item.isHovered"
         (mouseover)="item.isHovered = true"
         (mouseleave)="item.isHovered = false"
       >
@@ -18,7 +18,7 @@
         <a>{{ item.title }}</a>
         <div *ngIf="item.showSubMenu">
           <img
-              style="margin-top: 3px;"
+            style="margin-top: 3px;"
             [src]="item.isOpen ? '../../../assets/icons/angle-up.svg' : '../../../assets/icons/angle-black.png'"
             alt=""
           />
@@ -28,15 +28,19 @@
         <li
           *ngFor="let subItem of item.subMenu"
           class="submenu-item"
-          [class.active]="subItem === activeSubMenuItem"
-          (click)="setActiveSubMenuItem(subItem)"
+          [class.active]="subItem.isHovered || isSubMenuActive(subItem.route)"
+          (mouseover)="subItem.isHovered = true"
+          (mouseleave)="subItem.isHovered = false"
         >
           <ng-container *ngIf="subItem.showIcon">
             <i [class]="subItem.icon"></i>
           </ng-container>
-          <a 
-          [ngClass]="{ 'active': subItem.isHovered || isSubMenuActive(subItem.route) }"
-          [routerLink]="subItem.route">{{ subItem.title }}</a>
+          <a
+            [routerLink]="subItem.route"
+            [ngClass]="{ 'active': subItem.isHovered || isSubMenuActive(subItem.route) }"
+          >
+            {{ subItem.title }}
+          </a>
         </li>
       </ul>
     </li>
