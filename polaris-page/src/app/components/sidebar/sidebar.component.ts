@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SIDEBAR } from 'src/app/interface/general';
 import { GeneralService } from 'src/app/service/general.service';
 
@@ -9,8 +10,9 @@ import { GeneralService } from 'src/app/service/general.service';
 })
 export class SidebarComponent implements OnInit {
   sideBarMenu: any;
+  activeSubMenuItem: { title: string; icon: string; route: string; isHovered?: boolean } | null = null;
 
-  constructor(private genSrv: GeneralService) { }
+  constructor(private genSrv: GeneralService, private router: Router) { }
   
   ngOnInit(): void {
     this.sideBarMenu = this.genSrv.sideBarMenu
@@ -23,5 +25,13 @@ export class SidebarComponent implements OnInit {
       }
     });
     selectedItem.isOpen = !selectedItem.isOpen;
+  }
+
+  setActiveSubMenuItem(subItem: { title: string; icon: string; route: string; isHovered?: boolean }) {
+    this.activeSubMenuItem = subItem;
+  }
+
+  isSubMenuActive(route: string): boolean {
+    return this.router.url.includes(route);
   }
 }

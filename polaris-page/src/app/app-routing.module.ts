@@ -7,6 +7,8 @@ import { AuditTrailComponent } from './modules/audit-trail/audit-trail.component
 import { MyProfileComponent } from './modules/my-profile/my-profile.component';
 import { PortalSettingsComponent } from './modules/portal-settings/portal-settings.component';
 import { AdminReportsComponent } from './modules/admin-reports/admin-reports.component';
+import { ActivityLogComponent } from './modules/audit-trail/components/activity-log/activity-log.component';
+import { ChangeLogComponent } from './modules/audit-trail/components/change-log/change-log.component';
 
 const routes: Routes = [
   { path: '', component: MainLayoutComponent, children: [
@@ -20,8 +22,8 @@ const routes: Routes = [
         ]
       },
       { path: 'audit-trail', component: AuditTrailComponent, children: [
-          // { path: 'activity-log', component: YourActivityLogComponent },
-          // { path: 'change-log', component: YourChangeLogComponent }
+          { path: 'activity-log', component: ActivityLogComponent },
+          { path: 'change-log', component: ChangeLogComponent }
         ]
       },
       { path: 'my-profile', component: MyProfileComponent, children: [

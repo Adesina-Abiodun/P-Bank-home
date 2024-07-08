@@ -14,6 +14,8 @@ import { MyProfileComponent } from './modules/my-profile/my-profile.component';
 import { PortalSettingsComponent } from './modules/portal-settings/portal-settings.component';
 import { AdminReportsComponent } from './modules/admin-reports/admin-reports.component';
 import { TableUtilsComponent } from './utils/table-utils/table-utils.component';
+import { ActivityLogComponent } from './modules/audit-trail/components/activity-log/activity-log.component';
+import { ChangeLogComponent } from './modules/audit-trail/components/change-log/change-log.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { TableUtilsComponent } from './utils/table-utils/table-utils.component';
     PortalSettingsComponent,
     AdminReportsComponent,
     TableUtilsComponent,
+    ActivityLogComponent,
+    ChangeLogComponent,
   ],
   imports: [
     BrowserModule,
